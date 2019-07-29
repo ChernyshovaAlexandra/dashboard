@@ -337,3 +337,37 @@ main {
 .data-tab-item .user-panel {
     margin-right: 20px;
 }
+
+.ct-point{
+    stroke: #fff !important;
+    cursor:pointer;
+}
+.ct-line{
+    stroke: transparent !important;
+}
+.tooltip{
+    position: absolute;
+    background-color: #a5a3a3;
+    padding: 8px;
+    visibility: hidden;
+}
+.tooltip::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    background-color: #a5a3a3;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ct-label,
+.ct-label.ct-vertical.ct-start{
+    color: transparent;
+    fill: transparent;
+}
+.ct-series-a .ct-area{
+    fill: #0217d7;
+}
