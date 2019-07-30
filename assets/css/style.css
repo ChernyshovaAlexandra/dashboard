@@ -186,8 +186,8 @@ main {
 
 .container {
     padding: 0 30px;
-    flex: 70%;
-    max-width: 70%;
+    flex: 80%;
+    max-width: 75%;
 }
 
 .progress-bar {
@@ -291,12 +291,14 @@ main {
 }
 
 .left_block {
-    flex: 70%;
+    flex: 65%;
+    max-width: 65%;
     margin-right: 30px;
 }
 
 .right_block {
     flex: 35%;
+    max-width: 35%;
 }
 
 .data-tab-item {
@@ -410,7 +412,8 @@ main {
 }
 
 aside {
-    flex: 30%;
+    flex: 25%;
+    max-width: 25%;
 }
 
 .ct-label,
