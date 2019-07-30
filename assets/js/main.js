@@ -1,5 +1,6 @@
 $(document).ready(() => {
-
+    $(".cross").hide();
+    $(".menu").hide();
     $('.menu-item').on('click', function() {
         $('.menu-item').removeClass('active');
         $(this).addClass('active');
@@ -144,5 +145,12 @@ $(document).ready(() => {
         dots: true,
         centerMode: true,
         variableWidth: true
-    })
+    });
+
+    $(".hamburger").click(function() {
+        $(".menu-items").slideToggle("slow", function() {
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+    });
 });
