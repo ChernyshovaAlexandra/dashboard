@@ -369,6 +369,10 @@ main {
     margin: auto;
 }
 
+.toolt.tooltip-hidden {
+    visibility: hidden;
+}
+
 .ct-label,
 .ct-label.ct-vertical.ct-start {
     color: transparent;

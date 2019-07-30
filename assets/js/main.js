@@ -51,13 +51,16 @@ $(document).ready(() => {
     $(document).on('mouseenter', '.ct-point', function() {
         var seriesName = $(this).closest('.ct-series').attr('ct:series-name'),
             value = $(this).attr('ct:value');
-
-        $tooltip.text(value + " TL");
+        var cur = $('.points.active').attr('data-cur');
+        $tooltip.text(value + " " + cur);
         $tooltip.removeClass('tooltip-hidden');
     });
 
     $(document).on('mouseleave', '.ct-point', function() {
         $tooltip.addClass('tooltip-hidden');
+        $tooltip.css({
+            visibility: 'hidden'
+        });
     });
     $(document).on('mousemove', '.ct-point', function(event) {
         $tooltip.css({
