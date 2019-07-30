@@ -328,6 +328,8 @@ main {
 
 .data-actions {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .users .data-tab-item {
@@ -338,20 +340,23 @@ main {
     margin-right: 20px;
 }
 
-.ct-point{
+.ct-point {
     stroke: #fff !important;
-    cursor:pointer;
+    cursor: pointer;
 }
-.ct-line{
+
+.ct-line {
     stroke: transparent !important;
 }
-.tooltip{
+
+.tooltip {
     position: absolute;
     background-color: #a5a3a3;
     padding: 8px;
     visibility: hidden;
 }
-.tooltip::after{
+
+.tooltip::after {
     content: '';
     width: 15px;
     height: 15px;
@@ -363,11 +368,37 @@ main {
     right: 0;
     margin: auto;
 }
+
 .ct-label,
-.ct-label.ct-vertical.ct-start{
+.ct-label.ct-vertical.ct-start {
     color: transparent;
     fill: transparent;
 }
-.ct-series-a .ct-area{
+
+.ct-series-a .ct-area {
     fill: #0217d7;
+}
+
+.slick-initialized .slick-slide {
+    margin: 0 20px;
+    opacity: 0.3;
+}
+
+.slick-initialized .slick-slide.slick-active {
+    opacity: 1;
+}
+
+.slider-block {
+    max-width: 450px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.slider-block.cards {
+    max-width: 150px;
+}
+
+.slider-for {
+    max-width: 90%;
+    margin: auto;
 }
