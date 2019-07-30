@@ -187,6 +187,7 @@ main {
 .container {
     padding: 0 30px;
     flex: 70%;
+    max-width: 70%;
 }
 
 .progress-bar {
