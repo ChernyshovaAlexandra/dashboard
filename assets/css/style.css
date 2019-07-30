@@ -290,12 +290,12 @@ main {
 }
 
 .left_block {
-    max-width: 70%;
+    flex: 70%;
     margin-right: 30px;
 }
 
 .right_block {
-    max-width: 35%;
+    flex: 35%;
 }
 
 .data-tab-item {
