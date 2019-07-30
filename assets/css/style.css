@@ -87,6 +87,10 @@ body {
     float: left;
 }
 
+.user.main-img span {
+    line-height: 50px;
+}
+
 .user-icon img {
     height: 50px;
 }
