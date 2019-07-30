@@ -294,18 +294,13 @@ main {
     color: #fff;
 }
 
-.data-tab-item span.date,
-.data-tab-item span.submit_send {
-    color: #008aff;
-    font-size: 14px;
-}
-
 .data-tab-item span.submit_send:hover {
     cursor: pointer;
     opacity: 0.8;
 }
 
-.btn_action {
+.btn_action,
+.btn_default {
     -webkit-appearance: none;
     background: transparent;
     border: 2px solid #008aff;
@@ -314,6 +309,23 @@ main {
     color: #fff;
     width: 12em;
     margin-right: 30px;
+    cursor: pointer;
+}
+
+.btn_default {
+    border: none;
+    padding: 0;
+}
+
+.btn_default:hover {
+    opacity: .8
+}
+
+.data-tab-item span.date,
+.data-tab-item span.submit_send,
+.btn_default {
+    color: #008aff;
+    font-size: 14px;
 }
 
 .btn_action:hover {
@@ -405,4 +417,45 @@ main {
 .slider-for {
     max-width: 90%;
     margin: auto;
+}
+
+.rangeslider--horizontal {
+    height: 5px;
+}
+
+.rangeslider__fill {
+    background: #b6d4ef;
+}
+
+.rangeslider__handle {
+    width: 15px;
+    height: 15px;
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+    top: -5px;
+}
+
+.rangeslider__handle:after {
+    display: none;
+}
+
+.label-for-ranges {
+    color: #8999a9;
+    margin-bottom: 30px;
+    display: block;
+    margin-top: 20px;
+}
+
+.range-values output {
+    display: block;
+    position: relative;
+    top: -45px;
+    right: 0;
+    text-align: right;
+    border-bottom: 1px solid #37434f;
+}
+
+.range-values {
+    width: 50%;
 }

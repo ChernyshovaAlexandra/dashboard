@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="./assets/libs/rangeslider/rangeslider.js"></script>
     <link rel="stylesheet" href="./assets/libs/slick/slick.css">
     <link rel="stylesheet" href="./assets/libs/slick/slick-theme.css">
     <link rel="stylesheet" href="./assets/libs/chartist/chartist.min.css">
+    <link rel="stylesheet" href="./assets/libs/rangeslider/rangeslider.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Dashboard</title>
@@ -115,7 +118,37 @@
                             </header>
                             <div class="main_content">
                                 <div class="block_inner">
+                                    <div class="block_inner_content">
+                                        <div class="range-values">
+                                            <div>
+                                                <span class="label-for-ranges">Loan amount</span>
+                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
+                                                <output> </output>
+                                                <label><input type="hidden" name="max" value="100"></label>
 
+
+                                            </div>
+                                            <div>
+                                                <span class="label-for-ranges">Term</span>
+                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
+                                                <output> </output>
+                                                <label><input type="hidden" name="max" value="100"></label>
+                                            </div>
+                                            <div>
+                                                <span class="label-for-ranges">Installment amount</span>
+                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
+                                                <output> </output>
+                                                <label><input type="hidden" name="max" value="100"></label>
+                                            </div>
+                                        </div>
+                                        <div class="table-values">
+                                            <div></div>
+                                            <div class="data-actions">
+                                                <button class="btn_default">Pay the Debt</button>
+                                                <button class="btn_action">Activivty</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

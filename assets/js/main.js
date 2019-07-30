@@ -23,7 +23,6 @@ $(document).ready(() => {
     $('.points').on('click', function() {
         let points = Array.from($(this).attr('data-points').split(', '));
         let values = Array.from($(this).attr('data-val').split(', '));
-        // console.log($(this).parents('.block').find('.indicator'))
         $(this).parents('.block').find('.indicator').each(function(e, ind) {
             $(this).children('.progress-bar').children('span').css({ 'width': values[e] });
             $(this).children('p').text(values[e])
@@ -46,7 +45,7 @@ $(document).ready(() => {
         showArea: true
     });
 
-    var $tooltip = $('<div class="tooltip tooltip-hidden"   1></div>').appendTo($('.ct-chart'));
+    var $tooltip = $('<div class="tooltip tooltip-hidden"></div>').appendTo($('.ct-chart'));
 
     $(document).on('mouseenter', '.ct-point', function() {
         var seriesName = $(this).closest('.ct-series').attr('ct:series-name'),
@@ -85,5 +84,20 @@ $(document).ready(() => {
         arrows: false,
         centerMode: true,
         asNavFor: '.variable-width'
+    });
+
+    var $r = $('input[type=range]');
+    var output = $('output');
+
+    output.each(function(e, i) {
+        $(this).text($(this).parents('.range-values').find('input[type=range]').eq(e).val())
+    })
+
+    $r.rangeslider({
+        polyfill: false
+    });
+    $r.on('input', function(e) {
+        // console.log(e.currentTarget.value)
+        $(this).siblings('output').text(e.currentTarget.value);
     });
 });
