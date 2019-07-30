@@ -137,4 +137,12 @@ $(document).ready(() => {
         $('.value_area.rate').children('p').text(y + ' %');
         $('.value_area.total-cost').children('p').text(z + " TL");
     });
+    $('.col-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        variableWidth: true
+    })
 });
