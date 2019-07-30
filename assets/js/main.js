@@ -34,7 +34,11 @@ $(document).ready(() => {
             low: 0,
             showArea: true
         });
-    })
+    });
+
+
+
+
     new Chartist.Line('.ct-chart', {
         labels: [1, 2, 3, 4, 5],
         series: [
@@ -87,17 +91,50 @@ $(document).ready(() => {
     });
 
     var $r = $('input[type=range]');
-    var output = $('output');
-
+    var output = $('.dublicate');
+    var x = ($r.eq(0).val() * 100 / 80);
+    var y = ((($r.eq(1).val() / 100).toFixed(1)) + 1);
+    var z = (Math.floor($r.eq(0).val() / $r.eq(1).val()) + $r.eq(2).val()) / 100;
     output.each(function(e, i) {
-        $(this).text($(this).parents('.range-values').find('input[type=range]').eq(e).val())
-    })
-
+        let input = $(this).parents('.range-values').find('input[type=range]');
+        $(this).text(input.eq(e).val())
+        if (input.eq(e).val() == 0) {
+            input.eq(e).siblings('.head_info').children('.val_inputs').addClass('disabled');
+        }
+    });
+    $('.value_area.payback').children('p').text(x + " TL");
+    $('.value_area.rate').children('p').text(y + ' %');
+    $('.value_area.total-cost').children('p').text(z + " TL");
     $r.rangeslider({
         polyfill: false
     });
+
     $r.on('input', function(e) {
-        // console.log(e.currentTarget.value)
-        $(this).siblings('output').text(e.currentTarget.value);
+        x = ($r.eq(0).val() * 100 / 80);
+        y = ((($r.eq(1).val() / 100).toFixed(1)) + 1);
+        z = (Math.floor($r.eq(0).val() / $r.eq(1).val()) + $r.eq(2).val()) / 100;
+        $(this).siblings('.head_info').find('.dublicate').text(e.currentTarget.value);
+        $('.value_area.payback').children('p').text(x + " TL");
+        $('.value_area.rate').children('p').text(y + ' %');
+        $('.value_area.total-cost').children('p').text(z + " TL");
+        if (e.currentTarget.value == 0) {
+            $(this).siblings('.head_info').find('.val_inputs').addClass('disabled')
+        } else {
+            $(this).siblings('.head_info').find('.val_inputs').removeClass('disabled')
+        }
+    });
+    $('.range-toggle').on('click', function() {
+
+        let ranges = Array.from($(this).attr('data-val-ranges').split(', '));
+        $(this).parents('.block').find('input[type="range"]').each(function(e, ind) {
+            $(this).val(ranges[e]);
+            $(this).rangeslider('update', true);
+        });
+        x = ($r.eq(0).val() * 100 / 80);
+        y = ((($r.eq(1).val() / 100).toFixed(1)) + 1);
+        z = (Math.floor($r.eq(0).val() / $r.eq(1).val()) + $r.eq(2).val()) / 100;
+        $('.value_area.payback').children('p').text(x + " TL");
+        $('.value_area.rate').children('p').text(y + ' %');
+        $('.value_area.total-cost').children('p').text(z + " TL");
     });
 });

@@ -108,9 +108,9 @@
                                         <h3>Loan Calculater</h3>
                                         <div class="tabs">
                                             <div class="tab_content">
-                                                <div class="tab active">Consumer Loan</div>
-                                                <div class="tab">Auto Loan</div>
-                                                <div class="tab">Mortgage</div>
+                                                <div class="tab range-toggle active" data-val-ranges='120000, 96, 0'>Consumer Loan</div>
+                                                <div class="tab range-toggle" data-val-ranges='100000, 50, 5'>Auto Loan</div>
+                                                <div class="tab range-toggle" data-val-ranges='20000, 120, 15'>Mortgage</div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,28 +121,55 @@
                                     <div class="block_inner_content">
                                         <div class="range-values">
                                             <div>
-                                                <span class="label-for-ranges">Loan amount</span>
-                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
-                                                <output> </output>
-                                                <label><input type="hidden" name="max" value="100"></label>
-
-
-                                            </div>
-                                            <div>
-                                                <span class="label-for-ranges">Term</span>
-                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
-                                                <output> </output>
+                                                <div class="head_info">
+                                                    <span class="label-for-ranges">Loan amount</span>
+                                                    <div class="val_inputs">
+                                                        <p class="dublicate"> </p><span>TL</span>
+                                                    </div>
+                                                </div>
+                                                <input type="range" value="120000" min="0" max="240000" step="1000" data-rangeslider>
+                                                <output class='amount' style="display: none"> </output>
                                                 <label><input type="hidden" name="max" value="100"></label>
                                             </div>
                                             <div>
-                                                <span class="label-for-ranges">Installment amount</span>
-                                                <input type="range" value="50" min="10" max="100" step="5" data-rangeslider>
-                                                <output> </output>
+                                                <div class="head_info">
+                                                    <span class="label-for-ranges">Term</span>
+                                                    <div class="val_inputs">
+                                                        <p class="dublicate"> </p>
+                                                        <select name="Mount" id="Mount">
+                                                            <option value="Mount">Mount(s)</option>
+                                                        </select>
+                                                        <i class="fas fa-chevron-up open-select" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="range" value="96" min="10" max="120" step="1" data-rangeslider>
+                                                <output style="display: none"></output>
+                                                <label><input type="hidden" name="max" value="100"></label>
+                                            </div>
+                                            <div>
+                                                <div class="head_info">
+                                                    <span class="label-for-ranges">Installment amount</span>
+                                                    <div class="val_inputs">
+                                                        <p class="dublicate"> </p><span>TL</span>
+                                                    </div>
+                                                </div>
+                                                <input type="range" value="0" min="0" max="100" step="5" data-rangeslider>
+                                                <output style="display: none"> </output>
                                                 <label><input type="hidden" name="max" value="100"></label>
                                             </div>
                                         </div>
                                         <div class="table-values">
-                                            <div></div>
+                                            <div>
+                                                <div class="value_area rate">
+                                                    <p></p>
+                                                </div>
+                                                <div class="value_area total-cost">
+                                                    <p></p>
+                                                </div>
+                                                <div class="value_area payback">
+                                                    <p></p>
+                                                </div>
+                                            </div>
                                             <div class="data-actions">
                                                 <button class="btn_default">Pay the Debt</button>
                                                 <button class="btn_action">Activivty</button>

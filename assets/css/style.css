@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 @font-face {
@@ -57,7 +58,8 @@ body {
     padding: 7px 10px 0;
 }
 
-.menu-items {
+.menu-items,
+.val_inputs {
     display: flex;
 }
 
@@ -127,7 +129,8 @@ body {
     cursor: pointer;
 }
 
-i.open-submenu.opened {
+i.open-submenu.opened,
+i.open-select.opened {
     transform: rotate(0deg)
 }
 
@@ -151,6 +154,7 @@ main {
     color: #fff;
     font-family: 'MuseoSans500';
     font-size: 14px;
+    padding-bottom: 50px;
 }
 
 .block_inner_content,
@@ -440,6 +444,10 @@ main {
     display: none;
 }
 
+.rangeslider {
+    background: #19232c;
+}
+
 .label-for-ranges {
     color: #8999a9;
     margin-bottom: 30px;
@@ -457,5 +465,78 @@ main {
 }
 
 .range-values {
+    padding-bottom: 20px;
     width: 50%;
+}
+
+.head_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+select,
+option {
+    -webkit-appearance: none;
+    color: #0e75d5;
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.val_inputs>span {
+    margin-left: 8px;
+}
+
+.val_inputs.disabled {
+    opacity: .5;
+}
+
+i.open-select {
+    font-size: 10px;
+    transform: rotate(180deg);
+    align-self: center;
+    margin-left: 5px;
+    color: #0e75d5;
+    cursor: pointer;
+}
+
+.table-values {
+    max-width: 40%
+}
+
+.value_area {
+    background-color: #202a34;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    min-height: 50px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.value_area::before {
+    content: 'some text';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 10px;
+    color: #36404b;
+}
+
+.payback.value_area::before {
+    content: 'Payback';
+}
+
+.rate.value_area::before {
+    content: 'Per-Annum Rate';
+}
+
+.total-cost.value_area::before {
+    content: 'Total Cost';
 }
