@@ -193,7 +193,7 @@ main {
 
 .progress-bar {
     display: inline-flex;
-    max-width: 150px;
+    width: 150px;
     height: 3px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;

@@ -25,6 +25,7 @@ $(document).ready(() => {
         let points = Array.from($(this).attr('data-points').split(', '));
         let values = Array.from($(this).attr('data-val').split(', '));
         $(this).parents('.block').find('.indicator').each(function(e, ind) {
+            console.log($(this))
             $(this).children('.progress-bar').children('span').css({ 'width': values[e] });
             $(this).children('p').text(values[e])
         })
