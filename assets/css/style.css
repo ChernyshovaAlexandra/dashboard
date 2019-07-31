@@ -60,6 +60,7 @@ body {
     padding-right: 20px;
     color: #fff;
     font-size: 14px;
+    justify-content: space-between;
 }
 
 .search-panel {
@@ -187,7 +188,7 @@ main {
 .container {
     padding: 0 30px;
     flex: 80%;
-    max-width: 75%;
+    max-width: 80%;
 }
 
 .progress-bar {
@@ -374,9 +375,10 @@ main {
     align-items: center;
 }
 
-.data-tab-item .user-panel {
+
+/* .data-tab-item .user-panel {
     margin-right: 20px;
-}
+} */
 
 .ct-point {
     stroke: #fff !important;
@@ -413,7 +415,7 @@ main {
 
 aside {
     flex: 25%;
-    max-width: 25%;
+    max-width: 20%;
 }
 
 .ct-label,
@@ -673,6 +675,12 @@ i.open-select {
 
 .col a:hover {
     opacity: 0.8
+}
+
+@media (max-width:1300px) {
+    .menu-items li a {
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 1140px) {
